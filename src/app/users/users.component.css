@@ -5,10 +5,5 @@ ul {
   display: flex;
   gap: 0.5rem;
   overflow: auto;
-}
-
-@media (min-width: 768px) {
-  ul {
-    flex-direction: column;
-  }
+  flex-wrap: wrap;
 }
