@@ -1,12 +1,14 @@
 {
-  "name": "routing",
+  "name": "angular-routing",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "predeploy": "ng build --configuration production --output-path dist/angular-routing --base-href /angular-routing/",
+    "deploy": "gh-pages -d dist/angular-routing"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +35,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.4.2"
-  }
+    "typescript": "~5.4.2",
+    "gh-pages": "^6.1.1"
+  },
+  "homepage": "https://flavia3107.github.io/angular-routing"
 }
