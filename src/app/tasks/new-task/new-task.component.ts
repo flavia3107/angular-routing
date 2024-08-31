@@ -21,19 +21,21 @@ export class NewTaskComponent {
   private router = inject(Router);
 
   onSubmit() {
-    this.tasksService.addTask(
-      {
-        title: this.enteredTitle(),
-        summary: this.enteredSummary(),
-        date: this.enteredDate(),
-      },
-      this.userId()
-    );
-    this.submitted = true;
+    if (this.enteredDate() && this.enteredSummary() && this.enteredTitle()) {
+      this.tasksService.addTask(
+        {
+          title: this.enteredTitle(),
+          summary: this.enteredSummary(),
+          date: this.enteredDate(),
+        },
+        this.userId()
+      );
+      this.submitted = true;
 
-    this.router.navigate(['/users', this.userId(), 'tasks'], {
-      replaceUrl: true,
-    });
+      this.router.navigate(['/users', this.userId(), 'tasks'], {
+        replaceUrl: true,
+      });
+    }
   }
 }
 
