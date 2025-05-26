@@ -37,7 +37,7 @@ It demonstrates the use of **Angular Routing** for navigating between different 
 
 ## 🚀 Live Demo
 
-[Demo](https://flavia3107.github.io/angular-signals/](https://flavia3107.github.io/angular-routing/)
+[Demo](https://flavia3107.github.io/angular-routing/)
 
 ## 🎖️ Credits
 
